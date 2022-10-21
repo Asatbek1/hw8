@@ -9,14 +9,14 @@ justify-content:space-between;
 
 function ToDo({ todo, toggleTask, removeTask }) {
     return (
-        <ToDoLi key={todo.id} className="item-todo">
+        <ToDoLi key={todo.id} >
             <div 
-                className={todo.complete ? "item-text strike" : "item-text"}
+     
                 onClick={() => toggleTask(todo.id)}
                 >
                 {todo.task}
             </div>
-            <div className="item-delete" onClick={() => removeTask(todo.id)}>
+            <div  onClick={() => removeTask(todo.id)}>
                 X
             </div>
         </ToDoLi>
